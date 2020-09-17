@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab2. Pokemons list.</title>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="./utils.js"></script>
+  <style>
+    .title{
+      font-weight: bold;
+      font-size: 18px;
+      margin-right: 10px;
+    }
+    .error{
+      border: 2px solid red;
+    }
+    #add-pokemon{
+      margin-left: 15px;
+    }
+    .added-pokemon{
+      margin-bottom: 0px;
+      display:flex;
+      align-items: center;
+    }
+    .remove-pokemon {
+      margin-left: 15px;
+    }
+    #total{
+      font-size: 25px;
+      margin-top: 15px;
+      margin-left: 100px;
+    }
+    #results{
+      display:flex;
+      flex-direction: column;
+    }
+    #notFound{
+      font-size: 20px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-left: 100px; 
+    }
+  </style>
+</head>
+<body>
+  <h1>Pokemon weights list.</h1>
+  <div id="container">
+    name: <input type="text" id="pokemon-name">
+  <button id="add-pokemon" onclick="add_item_to_list_with_template()"> add</button>
+  </div>
+  <div id="results">
+      <div id="notFound"></div>
+      <div id="total"></div>
+      <ul id="pokemons">
+      </ul>
+  </div>
+</body>
+</html>
